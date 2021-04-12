@@ -6,7 +6,7 @@
   .grid-col-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0 11rem;
+    margin: 0 8rem;
   }
 }
 
@@ -25,7 +25,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 6rem;
-    margin: 0 11rem;
+    margin: 0 8rem;
   }
 
   transform: skewY(-7deg);
@@ -36,13 +36,24 @@
 
 .section-tours {
   background-color: $color-grey-light-1;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -10rem;
 
   .grid-col-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 6rem;
-    margin: 0 11rem;
+    margin: 0 8rem;
+  }
+}
+
+.section-stories {
+  padding: 10rem 0;
+  position: relative;
+
+  .story__container {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-top: 0;
   }
 }
