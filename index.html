@@ -91,19 +91,29 @@
           </div>
           <div class="col-2-of-2">
             <div class="composition">
+              <!-- Responsive images using srcset, different sizes of images are set in srcset with their width in pixels, in this case - 300px=300w and 1000px=1000w -->
+              <!-- sizes contain the breakpoints along with the viewport width which the images will occupy,
+the last option is the default width of image which will be set , if none of the conditions apply -->
+              <!-- src is used if the srcset fails -->
               <img
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width:900px) 20vw, (max-width:600px) 30vw, 300px"
+                alt="Photo "
                 src="img/nat-1-large.jpg"
-                alt=""
                 class="composition__photo composition__photo--p1"
               />
               <img
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width:900px) 20vw, (max-width:600px) 30vw, 300px"
+                alt="Photo "
                 src="img/nat-2-large.jpg"
-                alt=""
                 class="composition__photo composition__photo--p2"
               />
               <img
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width:900px) 20vw, (max-width:600px) 30vw, 300px"
+                alt="Photo "
                 src="img/nat-3-large.jpg"
-                alt=""
                 class="composition__photo composition__photo--p3"
               />
             </div>
@@ -407,8 +417,25 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__logo-box u-margin-bottom-big">
-        <img src="img/logo-green-1x.png" alt="FUll Logo" class="footer__logo" />
+      <div class="footer__logo-box">
+        <!-- picture tag is needed for showing different image in differrent sizes of devices -->
+        <picture class="footer__logo">
+          <!-- Image will be displayed as per the device pixel ratio -->
+
+          <source
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width:37.5em)"
+          />
+          <!-- for max width 37.5 em above image will be used -->
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            alt="FUll Logo"
+            class="footer__logo"
+          />
+        </picture>
       </div>
 
       <div class="grid-col-2">
