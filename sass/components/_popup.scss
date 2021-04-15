@@ -33,6 +33,11 @@
       display: grid;
       grid-template-rows: 1fr 1fr;
     }
+    @include respond(phone) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   //display table cell helps make both left and rightof equal height and side by side
   &__left {
@@ -40,7 +45,10 @@
     display: table-cell;
     @include respond(tab-port) {
       width: 100%;
-      display: table;
+      display: flex;
+    }
+    @include respond(phone) {
+      display: none;
     }
   }
 
@@ -52,6 +60,12 @@
     @include respond(tab-port) {
       width: 100%;
       padding-top: 0;
+      text-align: center;
+    }
+    @include respond(phone) {
+      width: 100%;
+      padding: 3rem 5rem;
+      text-align: center;
     }
   }
 
@@ -59,14 +73,10 @@
     display: block;
     width: 100%;
     object-fit: cover;
-    @include respond(tab-port) {
-      width: 50%;
-      display: table-cell;
-      object-fit: 110%;
-    }
   }
 
   &__text {
+    text-align: center;
     font-size: 1.4rem;
     column-count: 2;
     column-gap: 4rem;
