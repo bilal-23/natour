@@ -673,6 +673,9 @@ body {
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto; }
+    @media only screen and (max-width: 37.5em) {
+      .popup__text {
+        column-count: 1; } }
   .popup:target .popup__content {
     opacity: 1;
     transform: scale(1); }

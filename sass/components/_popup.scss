@@ -94,6 +94,9 @@
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+    @include respond(phone) {
+      column-count: 1;
+    }
   }
 
   //popup open animation
