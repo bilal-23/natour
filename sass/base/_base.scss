@@ -7,6 +7,17 @@
 }
 
 html {
-  font-size: 62.5%; //defines what 1 REM is
+  font-size: 62.5%; //1 rem = 10px, 10px/16px = 62.5
   scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; //1REM = 11.2px
+  }
+  @include respond(tab-port) {
+    font-size: 50%; //1REM = 9.6px
+  }
+
+  @include respond(big-destop) {
+    font-size: 75%; //1REM = 14.4px
+  }
 }
